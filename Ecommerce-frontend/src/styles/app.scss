@@ -86,20 +86,11 @@ body{
   }
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+.heading {
+  @include heading;
+  margin: 1rem 0;
+  text-align: center
+}
 
 
 .admin-container {
