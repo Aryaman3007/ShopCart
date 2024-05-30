@@ -7,6 +7,8 @@ const Search = lazy(() => import("./pages/Search"))
 const Cart = lazy(() => import("./pages/Cart"))
 const Shipping = lazy(() => import("./pages/Shipping"))
 const Login = lazy(() => import("./pages/Login"))
+const Orders = lazy(() => import("./pages/Orders"))
+const OrderDetails = lazy(() => import("./pages/OrderDetails"))
 
 const Header = lazy(() => import("./components/Header"))
 
@@ -44,10 +46,13 @@ const App = () => {
 
           {/* Logged in user routes */}
             <Route path="/shipping" element={<Shipping />} />
+            <Route path="/orders" element={<Orders />} />
+            <Route path="/order/:id" element={<OrderDetails />} />
 
           //Admin Routes
           <Route
           /*  element={
+             <ProtectedRoute isAuthenticated={true} adminRoute={true} isAdmin={true} />
              <ProtectedRoute isAuthenticated={true} adminRoute={true} isAdmin={true} />
            } */
           >
